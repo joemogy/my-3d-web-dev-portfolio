@@ -74,5 +74,20 @@ const joeTexture = new THREE.TextureLoader().load('joe.png');
 
 const joe = new THREE.Mesh(
     new THREE.BoxGeometry(3,3,3),
-    new THREE.MeshBasicMaterial( { joeTexture } )
+    new THREE.MeshBasicMaterial( { map: joeTexture } )
 );
+
+scene.add(joe);
+
+//Moon
+const moonTexture = new THREE.TextureLoader().load('Moon.png');
+
+const moon = new THREE.Mesh(
+    new THREE.SphereGeometry(3,33,33),
+    new THREE.MeshStandardMaterial( {
+        map: moonTexture,
+        normalMap: normalTexture
+    } )
+);
+
+scene.add(moon);
