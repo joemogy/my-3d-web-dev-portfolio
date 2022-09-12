@@ -65,7 +65,7 @@ scene.background = spaceTexture;
 
 // Avatar
 
-const joeTexture = new THREE.TextureLoader().load('joe.png');
+const joeTexture = new THREE.TextureLoader().load('joe.jpg');
 
 const joe = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: joeTexture }));
 
