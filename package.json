@@ -15,5 +15,9 @@
   "dependencies": {
     "gh-pages": "^4.0.0",
     "three": "^0.144.0"
-  }
+  },
+  "main": "main.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
