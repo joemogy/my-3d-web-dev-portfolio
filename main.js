@@ -3,6 +3,7 @@ import './style.css'
 import * as THREE from 'three'
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { arraySlice } from 'three/src/animation/AnimationUtils';
 
 const scene = new THREE.Scene();
 
@@ -48,6 +49,7 @@ function addStar() {
     scene.add(star)
 }
 
+array(200).fill().forEach(addStar)
 
 function animate() {
     requestAnimationFrame( animate );
