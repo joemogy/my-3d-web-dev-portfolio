@@ -55,6 +55,23 @@ array(200).fill().forEach(addStar)
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
+function moveCamera() {
+
+    const t = document.body.getBoundingClientRect().top;
+    moon.rotation.x += 0.05;
+    moon.rotation.y += 0.075;
+    moon.rotation.z += 0.05;
+
+    joe.rotation.y += 0.075;
+    joe.rotation.z += 0.05;
+
+    camera.position.z = t * -0.01;
+    camera.position.x = t * -0.0002;
+    camera.position.y = t * -0.0002;
+}
+
+
+
 function animate() {
     requestAnimationFrame( animate );
 
