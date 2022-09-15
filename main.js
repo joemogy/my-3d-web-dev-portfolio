@@ -19,10 +19,11 @@ camera.position.setX(-33);
 
 renderer.render(scene, camera);
 
+
 // Torus
 
 const geometry = new THREE.TorusGeometry(33, 3, 33, 333);
-const material = new THREE.MeshStandardMaterial({ color: 0xff6347, wireframe: true });
+const material = new THREE.MeshStandardMaterial({ color: 0xff0000, wireframe: true });
 const torus = new THREE.Mesh(geometry, material);
 
 scene.add(torus);
@@ -32,7 +33,7 @@ scene.add(torus);
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(5, 5, 5);
 
-const ambientLight = new THREE.AmbientLight(0xffffff);
+const ambientLight = new THREE.AmbientLight(0xfffff);
 scene.add(pointLight, ambientLight);
 
 // Helpers
@@ -138,26 +139,16 @@ function init() {
   resize();
 }
 
-
-//scroll to top of page
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-
-
-
 // Animation Loop
 
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.03;
-  torus.rotation.y += 0.0003;
-  torus.rotation.z += 0.03;
+  torus.rotation.x += 0.033;
+  torus.rotation.y += 0.0033;
+  torus.rotation.z += 0.033;
 
-  moon.rotation.x += 0.006;
+  moon.rotation.x += 0.003;
 
   // controls.update();
 
