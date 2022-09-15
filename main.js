@@ -6,7 +6,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
@@ -14,24 +14,54 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
+camera.position.y = 12;
 camera.position.setZ(33);
 camera.position.setX(-33);
 
 renderer.render(scene, camera);
 
+//GEOMETRY
 
 // Torus
 
-const geometry = new THREE.TorusGeometry(33, 3, 33, 333);
-const material = new THREE.MeshStandardMaterial({ color: 0xff0000, wireframe: true });
+const geometry = new THREE.TorusGeometry(42, 3, 33, 111);
+const material = new THREE.MeshStandardMaterial({ color: 0xffff00, wireframe: true });
 const torus = new THREE.Mesh(geometry, material);
 
 scene.add(torus);
 
+//Torus 2
+
+const geometry2 = new THREE.TorusGeometry(48, 3, 33, 111);
+const material2 = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true });
+const torus2 = new THREE.Mesh(geometry2, material2);
+
+scene.add(torus2);
+
+//Torus 3
+
+const geometry3 = new THREE.TorusGeometry(54, 3, 33, 111);
+const material3 = new THREE.MeshStandardMaterial({ color: 0x0B5394, wireframe: true });
+const torus3 = new THREE.Mesh(geometry3, material3);
+
+scene.add(torus3);
+
+const geometry4 = new THREE.TorusGeometry(60, 3, 33, 111);
+const material4 = new THREE.MeshStandardMaterial({ color: 0xff00ff, wireframe: true });
+const torus4 = new THREE.Mesh(geometry4, material4);
+
+scene.add(torus4);
+
+const geometry5 = new THREE.TorusGeometry(66, 3, 33, 111);
+const material5 = new THREE.MeshStandardMaterial({ color: 0xff0000, wireframe: true });
+const torus5 = new THREE.Mesh(geometry5, material5);
+
+scene.add(torus5);
+
 // Lights
 
 const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 5, 5);
+pointLight.position.set(6, 6, 6);
 
 const ambientLight = new THREE.AmbientLight(0xfffff);
 scene.add(pointLight, ambientLight);
@@ -45,19 +75,19 @@ scene.add(pointLight, ambientLight);
 // const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
-  const geometry = new THREE.SphereGeometry(0.03, 3, 3);
-  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const geometry = new THREE.SphereGeometry(0.333, 0.333, 0.333);
+  const material = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true });
   const star = new THREE.Mesh(geometry, material);
 
   const [x, y, z] = Array(3)
     .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(99));
+    .map(() => THREE.MathUtils.randFloatSpread(333));
 
   star.position.set(x, y, z);
   scene.add(star);
 }
 
-Array(666).fill().forEach(addStar);
+Array(333).fill().forEach(addStar);
 
 // Background
 
@@ -68,7 +98,7 @@ scene.background = spaceTexture;
 
 const joeTexture = new THREE.TextureLoader().load('joe.jpg');
 
-const joe = new THREE.Mesh(new THREE.BoxGeometry(9, 9, 9), new THREE.MeshBasicMaterial({ map: joeTexture }));
+const joe = new THREE.Mesh(new THREE.BoxGeometry(12, 12, 12), new THREE.MeshBasicMaterial({ map: joeTexture }));
 
 scene.add(joe);
 
@@ -78,7 +108,7 @@ const moonTexture = new THREE.TextureLoader().load('moon.jpg');
 const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(6, 66, 66),
+  new THREE.SphereGeometry(18, 99, 99),
   new THREE.MeshStandardMaterial({
     map: moonTexture,
     normalMap: normalTexture,
@@ -87,26 +117,51 @@ const moon = new THREE.Mesh(
 
 scene.add(moon);
 
-moon.position.z = 16;
-moon.position.setX(-10);
+//object positionings
 
+moon.position.setX(-21);
+moon.position.y = 15;
+moon.position.z = 21;
+
+torus.position.setX(-15);
+torus.position.y = 15;
+torus.position.z = 0;
+
+torus2.position.setX(-15);
+torus2.position.y = 15;
+torus2.position.z = 0;
+
+torus3.position.setX(-15);
+torus3.position.y = 15;
+torus3.position.z = 0;
+
+torus4.position.setX(-15);
+torus4.position.y = 15;
+torus4.position.z = 0;
+
+torus5.position.setX(-15);
+torus5.position.y = 15;
+torus5.position.z = 0;
+
+joe.position.setX(9);
+joe.position.y = 15;
 joe.position.z = -15;
-joe.position.x = 3;
-
 // Scroll Animation
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  moon.rotation.x += 0.05;
-  moon.rotation.y += 0.075;
-  moon.rotation.z += 0.05;
+  
+  moon.rotation.x += 0.01;
+  moon.rotation.y += 0.01;
+  moon.rotation.z += 0.01;
 
-  joe.rotation.y += 0.03;
-  joe.rotation.z += 0.03;
+  joe.rotation.x += 0.01;
+  joe.rotation.y += 0.01;
+  joe.rotation.z += 0.01;
 
+  camera.position.x = t * -0.001;
+  camera.rotation.y = t * -0.001;
   camera.position.z = t * -0.01;
-  camera.position.x = t * -0.0001;
-  camera.rotation.y = t * -0.0001;
 }
 
 document.body.onscroll = moveCamera;
@@ -114,14 +169,16 @@ moveCamera();
 
 //navigate to different sections of document on click nav bar links direct the user to the correctly named id section of the document    
 function navToAbout() {
-  document.getElementById("about").scrollIntoView();
+  document.getElementById("#about").scrollIntoView();
 }   
 function navToProjects() {
-  document.getElementById("projects").scrollIntoView();
+  document.getElementById("#projects").scrollIntoView();
 }
-
-function navToContact() {
-  document.getElementById("contact").scrollIntoView();
+function navToWork() {
+  document.getElementById("#work").scrollIntoView();
+}
+function navToContactMe() {
+  document.getElementById("#contactMe").scrollIntoView();
 }
 //RESIZE SCREEN
 function resize() {
@@ -144,15 +201,37 @@ function init() {
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.033;
-  torus.rotation.y += 0.0033;
-  torus.rotation.z += 0.033;
+  torus.rotation.x += 0.0006;
+  torus.rotation.y += 0.006;
+  torus.rotation.z += 0.0006;
 
-  moon.rotation.x += 0.003;
+  torus2.rotation.x += 0.006;
+  torus2.rotation.y += 0.0006;
+  torus2.rotation.z += 0.0006;
 
-  // controls.update();
+  torus3.rotation.x += -0.0006;
+  torus3.rotation.y += -0.006;
+  torus3.rotation.z += -0.0006;
 
-  renderer.render(scene, camera);
+  torus4.rotation.x += -0.006;
+  torus4.rotation.y += -0.0006;
+  torus4.rotation.z += -0.0006;
+
+  torus5.rotation.x += 0.00053;
+  torus5.rotation.y += 0.0053;
+  torus5.rotation.z += 0.00053;
+ 
+  moon.rotation.x += 0.001;
+  moon.rotation.y += 0.01;
+  moon.rotation.z += 0.001;
+  
+  joe.rotation.x += 0.0003;
+  joe.rotation.y += 0.003;
+  joe.rotation.z += 0.0003;
+
+  //controls.update();
+renderer.render(scene, camera);
+  
 }
 
 animate();
