@@ -46,7 +46,6 @@ const torus2 = addTorus(48, color2);
 const torus3 = addTorus(54, color3);
 const torus4 = addTorus(60, color4);
 //const torus5 = addTorus(66, color5);
-
 // Torus
 
 // const geometry = new THREE.TorusGeometry(42, 3, 33, 111);
@@ -54,6 +53,7 @@ const torus4 = addTorus(60, color4);
 // const torus = new THREE.Mesh(geometry, material);
 
 // scene.add(torus);  
+
 
 //Torus 2
 
@@ -165,9 +165,9 @@ torus4.position.setX(-15);
 torus4.position.y = 15;
 torus4.position.z = 0;
 
-torus5.position.setX(-15);
-torus5.position.y = 15;
-torus5.position.z = 0;
+// torus5.position.setX(-15);
+// torus5.position.y = 15;
+// torus5.position.z = 0;
 
 joe.position.setX(9);
 joe.position.y = 15;
@@ -243,9 +243,9 @@ function animate() {
   torus4.rotation.y += -0.0006;
   torus4.rotation.z += -0.0006;
 
-  torus5.rotation.x += 0.00053;
-  torus5.rotation.y += 0.0053;
-  torus5.rotation.z += 0.00053;
+  // torus5.rotation.x += 0.00053;
+  // torus5.rotation.y += 0.0053;
+  // torus5.rotation.z += 0.00053;
  
   moon.rotation.x += 0.001;
   moon.rotation.y += 0.01;
