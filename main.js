@@ -21,42 +21,67 @@ camera.position.setX(-33);
 renderer.render(scene, camera);
 
 //GEOMETRY
+// give torus randome color   
+
+function addTorus(size = 1 , ){
+  const geometry = new THREE.TorusGeometry(size, 3, 33, 111);
+  const material = new THREE.MeshStandardMaterial({ color: color, wireframe: true });
+  const torus = new THREE.Mesh(geometry, material);
+
+  torus.position.set(0, 0, 0);
+  scene.add(torus);
+  return torus;
+  
+}
+// give torus random color 
+
+const color = Math.random() * 0xffffff;
+const color2 = Math.random() * 0xffffff;
+const color3 = Math.random() * 0xffffff;
+const color4 = Math.random() * 0xffffff;
+//const color5 = Math.random() * 0xffffff;
+
+const torus = addTorus(42, color);
+const torus2 = addTorus(48, color2);
+const torus3 = addTorus(54, color3);
+const torus4 = addTorus(60, color4);
+//const torus5 = addTorus(66, color5);
 
 // Torus
 
-const geometry = new THREE.TorusGeometry(42, 3, 33, 111);
-const material = new THREE.MeshStandardMaterial({ color: 0xffff00, wireframe: true });
-const torus = new THREE.Mesh(geometry, material);
+// const geometry = new THREE.TorusGeometry(42, 3, 33, 111);
+// const material = new THREE.MeshStandardMaterial({ color: 0xffff00, wireframe: true });
+// const torus = new THREE.Mesh(geometry, material);
 
-scene.add(torus);
+// scene.add(torus);  
 
 //Torus 2
 
-const geometry2 = new THREE.TorusGeometry(48, 3, 33, 111);
-const material2 = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true });
-const torus2 = new THREE.Mesh(geometry2, material2);
+// const geometry2 = new THREE.TorusGeometry(48, 3, 33, 111);
+// const material2 = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true });
+// const torus2 = new THREE.Mesh(geometry2, material2);
 
-scene.add(torus2);
+// scene.add(torus2);
 
-//Torus 3
+// //Torus 3
 
-const geometry3 = new THREE.TorusGeometry(54, 3, 33, 111);
-const material3 = new THREE.MeshStandardMaterial({ color: 0x0B5394, wireframe: true });
-const torus3 = new THREE.Mesh(geometry3, material3);
+// const geometry3 = new THREE.TorusGeometry(54, 3, 33, 111);
+// const material3 = new THREE.MeshStandardMaterial({ color: 0x0B5394, wireframe: true });
+// const torus3 = new THREE.Mesh(geometry3, material3);
 
-scene.add(torus3);
+// scene.add(torus3);
 
-const geometry4 = new THREE.TorusGeometry(60, 3, 33, 111);
-const material4 = new THREE.MeshStandardMaterial({ color: 0xff00ff, wireframe: true });
-const torus4 = new THREE.Mesh(geometry4, material4);
+// const geometry4 = new THREE.TorusGeometry(60, 3, 33, 111);
+// const material4 = new THREE.MeshStandardMaterial({ color: 0xff00ff, wireframe: true });
+// const torus4 = new THREE.Mesh(geometry4, material4);
 
-scene.add(torus4);
+// scene.add(torus4);
 
-const geometry5 = new THREE.TorusGeometry(66, 3, 33, 111);
-const material5 = new THREE.MeshStandardMaterial({ color: 0xff0000, wireframe: true });
-const torus5 = new THREE.Mesh(geometry5, material5);
+// const geometry5 = new THREE.TorusGeometry(66, 3, 33, 111);
+// const material5 = new THREE.MeshStandardMaterial({ color: 0xff0000, wireframe: true });
+// const torus5 = new THREE.Mesh(geometry5, material5);
 
-scene.add(torus5);
+// scene.add(torus5);
 
 // Lights
 
@@ -127,6 +152,7 @@ torus.position.setX(-15);
 torus.position.y = 15;
 torus.position.z = 0;
 
+
 torus2.position.setX(-15);
 torus2.position.y = 15;
 torus2.position.z = 0;
@@ -169,16 +195,16 @@ moveCamera();
 
 //navigate to different sections of document on click nav bar links direct the user to the correctly named id section of the document    
 function navToAbout() {
-  document.getElementById("#about").scrollIntoView();
+  document.getElementById("about").scrollIntoView();
 }   
 function navToProjects() {
-  document.getElementById("#projects").scrollIntoView();
+  document.getElementById("projects").scrollIntoView();
 }
 function navToWork() {
-  document.getElementById("#work").scrollIntoView();
+  document.getElementById("work").scrollIntoView();
 }
 function navToContactMe() {
-  document.getElementById("#contactMe").scrollIntoView();
+  document.getElementById("contactMe").scrollIntoView();
 }
 //RESIZE SCREEN
 function resize() {
