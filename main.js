@@ -111,14 +111,51 @@ function moveCamera() {
 document.body.onscroll = moveCamera;
 moveCamera();
 
+//navigate to different sections of document on click nav bar links direct the user to the correctly named id section of the document    
+function navToAbout() {
+  document.getElementById("about").scrollIntoView();
+}   
+function navToProjects() {
+  document.getElementById("projects").scrollIntoView();
+}
+
+function navToContact() {
+  document.getElementById("contact").scrollIntoView();
+}
+//RESIZE SCREEN
+function resize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+//resize window event listener
+window.addEventListener('resize', resize, false);   
+init();
+
+//resize animation
+function init() {
+  animate();
+  resize();
+}
+
+
+//scroll to top of page
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+
+
 // Animation Loop
 
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.033;
-  torus.rotation.y += 0.0066;
-  torus.rotation.z += 0.033;
+  torus.rotation.x += 0.03;
+  torus.rotation.y += 0.0003;
+  torus.rotation.z += 0.03;
 
   moon.rotation.x += 0.006;
 
