@@ -19,13 +19,5 @@
   "main": "main.js",
   "author": "",
   "license": "ISC",
-  "description": "## 02 Advanced CSS: Portfolio https://my-3d-web-dev-portfolio.tiiny.site/ ## Description Short discription",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joemogy/my-3d-web-dev-portfolio.git"
-  },
-  "bugs": {
-    "url": "https://github.com/joemogy/my-3d-web-dev-portfolio/issues"
-  },
-  "homepage": "https://github.com/joemogy/my-3d-web-dev-portfolio#readme"
+  "description": ""
 }
