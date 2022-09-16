@@ -15,14 +15,15 @@ A portfolio of work can showcase your skills and talents to employers looking to
   
 - What problem does it solve?
 
-A portfolio of work can showcase your skills and talents to employers looking to fill a part-time or full-time position. An effective portfolio highlights your strongest work as well as the thought processes behind it. Students who have portfolios with deployed web applications (meaning they are live on the web) are typically very successful in their career search after the boot camp. This last point can’t be stressed enough: having several deployed projects is a minimum requirement to receive an initial interview at many companies.
+A portfolio of work can showcase your skills and talents to employers looking to fill a part-time or full-time position. An effective portfolio highlights your strongest work as well as the thought processes behind it. Students who have portfolios with deployed web applications (meaning they are live on the web) are typically very successful in their career search after the boot camp. This last point can’t be stressed enough: having several deployed projects is a minimum requirement to receive an initial interview at many companies. I really could use a job
+lol
 
 - What did you learn?
 html
 css
 javascript
 github
-vive
+vite
 npm
 node.js
 three.js
@@ -73,7 +74,7 @@ npm run dev
 Screenshot
 
 ![Screenshot](/my-3d-web-dev-portfolio-screenshot.png)
-https://github.com/joemogy/02-challenge.git
+
 ##Credits
   https://eloquentjavascript.net/
   https://www.w3schools.com/html/default.asp
