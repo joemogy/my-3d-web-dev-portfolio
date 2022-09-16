@@ -34,11 +34,13 @@ function addTorus(size = 1 , ){
   
 }
 // give torus random color 
+//change torus color on click
 
-const color = Math.random() * 0xffffff;
-const color2 = Math.random() * 0xffffff;
-const color3 = Math.random() * 0xffffff;
-const color4 = Math.random() * 0xffffff;
+const color = Math.random(+444) * 0xffffff;
+const color2 = Math.random(+333) * 0xffffff;
+const color3 = Math.random(+222) * 0xffffff;
+const color4 = Math.random(+111) * 0xffffff;
+
 //const color5 = Math.random() * 0xffffff;
 
 const torus = addTorus(42, color);
