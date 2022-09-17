@@ -90,7 +90,7 @@ const torus4 = addTorus(60, color4);
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(6, 6, 6);
 
-const ambientLight = new THREE.AmbientLight(0xfffff);
+const ambientLight = new THREE.AmbientLight(0xffffcc);
 scene.add(pointLight, ambientLight);
 
 // Helpers
