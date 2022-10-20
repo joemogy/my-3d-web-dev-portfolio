@@ -25,7 +25,7 @@ renderer.render(scene, camera);
 
 function addTorus(size = 1 , ){
   const geometry = new THREE.TorusGeometry(size, 3, 33, 111);
-  const material = new THREE.MeshStandardMaterial({ color: color, wireframe: true });
+  const material = new THREE.MeshStandardMaterial({ color: color1, wireframe: true });
   const torus = new THREE.Mesh(geometry, material);
 
   torus.position.set(0, 0, 0);
@@ -33,64 +33,91 @@ function addTorus(size = 1 , ){
   return torus;
   
 }
-// give torus random color USIng Math.random and Math.floor
-const color = Math.floor(Math.random() * 16777215).toString(16);
-const color2 = Math.floor(Math.random() * 16777215).toString(16);
-const color3 = Math.floor(Math.random() * 16777215).toString(16);
-const color4 = Math.floor(Math.random() * 16777215).toString(16);
-const color5 = Math.floor(Math.random() * 16777215).toString(16);
-const color6 = Math.floor(Math.random() * 16777215).toString(16);
-const color7 = Math.floor(Math.random() * 16777215).toString(16);
-const color8 = Math.floor(Math.random() * 16777215).toString(16);
+// give torus random color USIng Math
+
+const color1 = 0xff0000;
+const color2 = 0x008000;
+const color3 = 0x0000ff;
+const color4 = 0xffff00;
+const color5 = 0xffffff;
+const color6 = 0x0033cc;
+const color7 = 0x00ffff;
+const color8 = 0xff00ff;
 
 
 
 
-const torus = addTorus(42, color);
-const torus2 = addTorus(48, color2);
-const torus3 = addTorus(54, color3);
-const torus4 = addTorus(60, color4);
-const torus5 = addTorus(66, color5);
-const torus6 = addTorus(72, color6);
-const torus7 = addTorus(78, color6);
-const torus8 = addTorus(84, color5);
 
-// Torus
+// const torus = addTorus(42, color1);
+// const torus2 = addTorus(48,color2);
+// const torus3 = addTorus(54, color3);
+// const torus4 = addTorus(60, color4);
+// const torus5 = addTorus(66, color5);
+// const torus6 = addTorus(72, color6);
+// const torus7 = addTorus(78, color7);
+// const torus8 = addTorus(84, color8);
 
-// const geometry = new THREE.TorusGeometry(42, 3, 33, 111);
-// const material = new THREE.MeshStandardMaterial({ color: 0xffff00, wireframe: true });
-// const torus = new THREE.Mesh(geometry, material);
+// torus
 
-// scene.add(torus);  
+const geometry = new THREE.TorusGeometry(42, 3, 33, 111);
+const material = new THREE.MeshStandardMaterial({ color: 0xff0000, wireframe: true });
+const torus = new THREE.Mesh(geometry, material);
+
+scene.add(torus);  
 
 
-//Torus 2
+// Torus 2
 
-// const geometry2 = new THREE.TorusGeometry(48, 3, 33, 111);
-// const material2 = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true });
-// const torus2 = new THREE.Mesh(geometry2, material2);
+const geometry2 = new THREE.TorusGeometry(48, 3, 33, 111);
+const material2 = new THREE.MeshStandardMaterial({ color: 0x008000, wireframe: true });
+const torus2 = new THREE.Mesh(geometry2, material2);
 
-// scene.add(torus2);
+scene.add(torus2);
 
-// //Torus 3
+//Torus 3
 
-// const geometry3 = new THREE.TorusGeometry(54, 3, 33, 111);
-// const material3 = new THREE.MeshStandardMaterial({ color: 0x0B5394, wireframe: true });
-// const torus3 = new THREE.Mesh(geometry3, material3);
+const geometry3 = new THREE.TorusGeometry(54, 3, 33, 111);
+const material3 = new THREE.MeshStandardMaterial({ color: 0x0000ff, wireframe: true });
+const torus3 = new THREE.Mesh(geometry3, material3);
 
-// scene.add(torus3);
+scene.add(torus3);
 
-// const geometry4 = new THREE.TorusGeometry(60, 3, 33, 111);
-// const material4 = new THREE.MeshStandardMaterial({ color: 0xff00ff, wireframe: true });
-// const torus4 = new THREE.Mesh(geometry4, material4);
+//torus4
+const geometry4 = new THREE.TorusGeometry(60, 3, 33, 111);
+const material4 = new THREE.MeshStandardMaterial({ color: 0xffff00, wireframe: true });
+const torus4 = new THREE.Mesh(geometry4, material4);
 
-// scene.add(torus4);
+scene.add(torus4);
 
-// const geometry5 = new THREE.TorusGeometry(66, 3, 33, 111);
-// const material5 = new THREE.MeshStandardMaterial({ color: 0xff0000, wireframe: true });
-// const torus5 = new THREE.Mesh(geometry5, material5);
+//torus5
 
-// scene.add(torus5);
+const geometry5 = new THREE.TorusGeometry(66, 3, 33, 111);
+const material5 = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true });
+const torus5 = new THREE.Mesh(geometry5, material5);
+
+scene.add(torus5);
+
+//torus6
+const geometry6 = new THREE.TorusGeometry(72, 3, 33, 111);
+const material6 = new THREE.MeshStandardMaterial({ color: 0xffa500, wireframe: true });
+const torus6 = new THREE.Mesh(geometry6, material6);
+
+scene.add(torus6);
+
+//torus7
+const geometry7 = new THREE.TorusGeometry(78, 3, 33, 111);
+const material7 = new THREE.MeshStandardMaterial({ color: 0x00ffff, wireframe: true });
+const torus7 = new THREE.Mesh(geometry7, material7);
+
+scene.add(torus7);
+
+//torus8
+const geometry8 = new THREE.TorusGeometry(84, 3, 33, 111);
+const material8 = new THREE.MeshStandardMaterial({ color: 0xff00ff, wireframe: true });
+const torus8 = new THREE.Mesh(geometry8, material8);
+
+scene.add(torus8);
+
 
 // Lights
 
