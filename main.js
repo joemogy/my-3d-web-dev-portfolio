@@ -33,21 +33,28 @@ function addTorus(size = 1 , ){
   return torus;
   
 }
-// give torus random color 
-//change torus color on click
+// give torus random color USIng Math.random and Math.floor
+const color = Math.floor(Math.random() * 16777215).toString(16);
+const color2 = Math.floor(Math.random() * 16777215).toString(16);
+const color3 = Math.floor(Math.random() * 16777215).toString(16);
+const color4 = Math.floor(Math.random() * 16777215).toString(16);
+const color5 = Math.floor(Math.random() * 16777215).toString(16);
+const color6 = Math.floor(Math.random() * 16777215).toString(16);
+const color7 = Math.floor(Math.random() * 16777215).toString(16);
+const color8 = Math.floor(Math.random() * 16777215).toString(16);
 
-const color = Math.random(+444) * 0xffffff;
-const color2 = Math.random(+333) * 0xffffff;
-const color3 = Math.random(+222) * 0xffffff;
-const color4 = Math.random(+111) * 0xffffff;
 
-//const color5 = Math.random() * 0xffffff;
+
 
 const torus = addTorus(42, color);
 const torus2 = addTorus(48, color2);
 const torus3 = addTorus(54, color3);
 const torus4 = addTorus(60, color4);
-//const torus5 = addTorus(66, color5);
+const torus5 = addTorus(66, color5);
+const torus6 = addTorus(72, color6);
+const torus7 = addTorus(78, color6);
+const torus8 = addTorus(84, color5);
+
 // Torus
 
 // const geometry = new THREE.TorusGeometry(42, 3, 33, 111);
@@ -167,9 +174,23 @@ torus4.position.setX(-15);
 torus4.position.y = 15;
 torus4.position.z = 0;
 
-// torus5.position.setX(-15);
-// torus5.position.y = 15;
-// torus5.position.z = 0;
+torus5.position.setX(-15);
+torus5.position.y = 15;
+torus5.position.z = 0;
+
+torus6.position.setX(-15);
+torus6.position.y = 15;
+torus6.position.z = 0;
+
+torus7.position.setX(-15);
+torus7.position.y = 15;
+torus7.position.z = 0;
+
+torus8.position.setX(-15);
+torus8.position.y = 15;
+torus8.position.z = 0;
+
+
 
 joe.position.setX(9);
 joe.position.y = 15;
@@ -229,26 +250,39 @@ function init() {
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.0006;
-  torus.rotation.y += 0.006;
-  torus.rotation.z += 0.0006;
+  torus.rotation.x += 0.0003;
+  torus.rotation.y += 0.003;
+  torus.rotation.z += 0.0003;
 
-  torus2.rotation.x += 0.006;
-  torus2.rotation.y += 0.0006;
-  torus2.rotation.z += 0.0006;
+  torus2.rotation.x += 0.003;
+  torus2.rotation.y += 0.0003;
+  torus2.rotation.z += 0.0003;
 
-  torus3.rotation.x += -0.0006;
-  torus3.rotation.y += -0.006;
-  torus3.rotation.z += -0.0006;
+  torus3.rotation.x += -0.0003;
+  torus3.rotation.y += -0.003;
+  torus3.rotation.z += -0.0003;
 
-  torus4.rotation.x += -0.006;
-  torus4.rotation.y += -0.0006;
-  torus4.rotation.z += -0.0006;
+  torus4.rotation.x += -0.003;
+  torus4.rotation.y += -0.0003;
+  torus4.rotation.z += -0.0003;
 
-  // torus5.rotation.x += 0.00053;
-  // torus5.rotation.y += 0.0053;
-  // torus5.rotation.z += 0.00053;
+  torus5.rotation.x += 0.0006;
+  torus5.rotation.y += 0.006;
+  torus5.rotation.z += 0.0006;
  
+  torus6.rotation.x += 0.006;
+  torus6.rotation.y += 0.0006;
+  torus6.rotation.z += 0.0006;
+
+  torus7.rotation.x += -0.0006;
+  torus7.rotation.y += -0.006;
+  torus7.rotation.z += -0.0006;
+
+  torus8.rotation.x += -0.006;
+  torus8.rotation.y += -0.0006;
+  torus8.rotation.z += -0.0006;
+
+
   moon.rotation.x += 0.001;
   moon.rotation.y += 0.01;
   moon.rotation.z += 0.001;
