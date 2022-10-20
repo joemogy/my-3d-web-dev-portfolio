@@ -84,16 +84,17 @@ canvas {
   grid-auto-rows: 240px;
 }
 .photo-grid img {
-  width: 25%;
-  height: 25%;
+  width: 2.5%;
+  height: 2.5%;
   object-fit: cover;
   object-position: center;
   border-radius: 4px;
   transition: all 500ms;
+  font-size: 16px;
 }
 .photo-grid img:hover {
   box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-  transform: translateY(-3px) scale(1.1);
+  transform: translateY(-3px) scale(1.5);
 }
 
   header {
