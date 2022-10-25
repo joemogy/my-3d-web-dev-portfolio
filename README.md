@@ -30,7 +30,7 @@ three.js
 tiiny.host
 
 
-##live Link
+## live Link
 
 
 -https://my-3d-web-dev-portfolio.tiiny.site/
@@ -75,7 +75,7 @@ Screenshot
 
 ![Screenshot](/my-3d-web-dev-portfolio-screenshot.png)
 
-##Credits
+## Credits
   https://eloquentjavascript.net/
   https://www.w3schools.com/html/default.asp
   https://www.w3schools.com/css/css_howto.asp
@@ -90,7 +90,7 @@ Screenshot
   
 
 
-##License
+## License
 
 MIT License
 
