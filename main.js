@@ -23,7 +23,7 @@ renderer.render(scene, camera);
 //GEOMETRY
 // give torus randome color   
 
-function addTorus(size = 1 , ){
+function addTorus(size = 3 , ){
   const geometry = new THREE.TorusGeometry(size, 3, 33, 111);
   const material = new THREE.MeshStandardMaterial({ color: color1, wireframe: true });
   const torus = new THREE.Mesh(geometry, material);
