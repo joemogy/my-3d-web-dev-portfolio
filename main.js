@@ -189,21 +189,21 @@ const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
-//joe1
+//joe
 
-const joe1Texture = new THREE.TextureLoader().load('joe1.png');
+const joeTexture = new THREE.TextureLoader().load('joe.png');
 
-const joe1 = new THREE.Mesh(new THREE.BoxGeometry(18, 18, 18), new THREE.MeshBasicMaterial({ map: joe1Texture }));
+const joe = new THREE.Mesh(new THREE.BoxGeometry(18, 18, 18), new THREE.MeshBasicMaterial({ map: joeTexture }));
 
-scene.add(joe1);
+scene.add(joe);
 
-//joe2
+//joseph
 
-const joe2Texture = new THREE.TextureLoader().load('joe2.png');
+const josephTexture = new THREE.TextureLoader().load('joseph.png');
 
-const joe2 = new THREE.Mesh(new THREE.BoxGeometry(24, 36, 24), new THREE.MeshBasicMaterial({ map: joe2Texture }));
+const joseph = new THREE.Mesh(new THREE.BoxGeometry(24, 36, 24), new THREE.MeshBasicMaterial({ map: josephTexture }));
 
-scene.add(joe2);
+scene.add(joseph);
 
 
 // Moon
@@ -227,13 +227,13 @@ moon.position.setX(-21);
 moon.position.y = 15;
 moon.position.z = 21;
 
-joe1.position.setX(9);
-joe1.position.y = 15;
-joe1.position.z = -15;
+joe.position.setX(9);
+joe.position.y = 15;
+joe.position.z = -15;
 
-joe2.position.setX(80);
-joe2.position.y = 33;
-joe2.position.z = 80;
+joseph.position.setX(80);
+joseph.position.y = 33;
+joseph.position.z = 80;
 
 
 torus.position.setX(-15);
@@ -295,13 +295,13 @@ function moveCamera() {
   moon.rotation.y += 0.02;
   moon.rotation.z += 0.02;
 
-  joe1.rotation.x += 0.01;
-  joe1.rotation.y += 0.01;
-  joe1.rotation.z += 0.01;
+  joe.rotation.x += 0.01;
+  joe.rotation.y += 0.01;
+  joe.rotation.z += 0.01;
 
-  joe2.rotation.x += 0.01;
-  joe2.rotation.y += 0.01;
-  joe2.rotation.z += 0.01;
+  joseph.rotation.x += 0.01;
+  joseph.rotation.y += 0.01;
+  joseph.rotation.z += 0.01;
 
   camera.position.x = t * -0.001;
   camera.rotation.y = t * -0.001;
@@ -398,13 +398,13 @@ function animate() {
   moon.rotation.y += 0.006;
   moon.rotation.z += 0.0006;
   
-  joe1.rotation.x += 0.0003;
-  joe1.rotation.y += 0.003;
-  joe1.rotation.z += 0.0003;
+  joe.rotation.x += 0.0003;
+  joe.rotation.y += 0.003;
+  joe.rotation.z += 0.0003;
 
-  joe2.rotation.x += -0.0003;
-  joe2.rotation.y += -0.003;
-  joe2.rotation.z += -0.0003;
+  joseph.rotation.x += -0.0003;
+  joseph.rotation.y += -0.003;
+  joseph.rotation.z += -0.0003;
 
 
   //controls.update();
