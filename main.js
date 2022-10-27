@@ -193,13 +193,13 @@ scene.background = spaceTexture;
 
 const joeTexture = new THREE.TextureLoader().load('joe.png');
 
-const joe = new THREE.Mesh(new THREE.BoxGeometry(16, 16, 16), new THREE.MeshBasicMaterial({ map: joeTexture }));
+const joe = new THREE.Mesh(new THREE.BoxGeometry(18, 18, 18), new THREE.MeshBasicMaterial({ map: joeTexture }));
 
 scene.add(joe);
 
 //joey
 
-const joeyTexture = new THREE.TextureLoader().load('joey.jpg');
+const joeyTexture = new THREE.TextureLoader().load('joey.png');
 
 const joey = new THREE.Mesh(new THREE.BoxGeometry(24, 36, 24), new THREE.MeshBasicMaterial({ map: joeyTexture }));
 
@@ -212,7 +212,7 @@ const moonTexture = new THREE.TextureLoader().load('moon.jpg');
 const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
 const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(12, 99, 99),
+  new THREE.SphereGeometry(18, 99, 99),
   new THREE.MeshStandardMaterial({
     map: moonTexture,
     normalMap: normalTexture,
@@ -291,9 +291,9 @@ torus12.position.z = 3;
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   
-  moon.rotation.x += 0.01;
-  moon.rotation.y += 0.01;
-  moon.rotation.z += 0.01;
+  moon.rotation.x += 0.02;
+  moon.rotation.y += 0.02;
+  moon.rotation.z += 0.02;
 
   joe.rotation.x += 0.01;
   joe.rotation.y += 0.01;
@@ -394,17 +394,17 @@ function animate() {
   torus12.rotation.z += -0.003;
 
 
-  moon.rotation.x += 0.0003;
-  moon.rotation.y += 0.003;
-  moon.rotation.z += 0.0003;
+  moon.rotation.x += 0.0006;
+  moon.rotation.y += 0.006;
+  moon.rotation.z += 0.0006;
   
   joe.rotation.x += 0.0003;
   joe.rotation.y += 0.003;
   joe.rotation.z += 0.0003;
 
-  joey.rotation.x += 0.0003;
-  joey.rotation.y += 0.003;
-  joey.rotation.z += 0.0003;
+  joey.rotation.x += -0.0003;
+  joey.rotation.y += -0.003;
+  joey.rotation.z += -0.0003;
 
 
   //controls.update();
