@@ -191,7 +191,7 @@ scene.background = spaceTexture;
 // Avatar
 //joe
 
-const joeTexture = new THREE.TextureLoader().load('joe.png');
+const joeTexture = new THREE.TextureLoader().load('./joseph-office.png');
 
 const joe = new THREE.Mesh(new THREE.BoxGeometry(18, 18, 18), new THREE.MeshBasicMaterial({ map: joeTexture }));
 
@@ -199,7 +199,7 @@ scene.add(joe);
 
 //joseph
 
-const josephTexture = new THREE.TextureLoader().load('joseph.png');
+const josephTexture = new THREE.TextureLoader().load('joe-studio.png');
 
 const joseph = new THREE.Mesh(new THREE.BoxGeometry(24, 36, 24), new THREE.MeshBasicMaterial({ map: josephTexture }));
 
