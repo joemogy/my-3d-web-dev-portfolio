@@ -8,6 +8,7 @@ const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 0.1, 1000);
 
+
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
@@ -191,7 +192,7 @@ scene.background = spaceTexture;
 // Avatar
 //joe
 
-const joeTexture = new THREE.TextureLoader().load('./joseph-office.png');
+const joeTexture = new THREE.TextureLoader().load('joseph-office.png');
 
 const joe = new THREE.Mesh(new THREE.BoxGeometry(18, 18, 18), new THREE.MeshBasicMaterial({ map: joeTexture }));
 
