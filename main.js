@@ -176,7 +176,7 @@ function addStar() {
 
   const [x, y, z] = Array(3)
     .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(666));
+    .map(() => THREE.MathUtils.randFloatSpread(333));
 
   star.position.set(x, y, z);
   scene.add(star);
@@ -189,7 +189,11 @@ Array(666).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
+//make background wraparound
+
+
 // Avatar
+
 //joe
 
 const joeTexture = new THREE.TextureLoader().load('joe.png');
@@ -216,6 +220,30 @@ const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 const moon = new THREE.Mesh(new THREE.SphereGeometry(18, 99, 99), new THREE.MeshStandardMaterial({map: moonTexture,normalMap: normalTexture,}));
 
 scene.add(moon);
+
+
+
+// //inverse cylinder with space.jpg seen on inside
+
+// const geometry13 = new THREE.CylinderGeometry( 0, 666, 3333, 3333, 3333, true );
+// const material13 = new THREE.MeshBasicMaterial({map: spaceTexture, side: THREE.BackSide, wireframe: false} );
+// const cylinder = new THREE.Mesh( geometry13, material13 );
+// scene.add( cylinder );
+
+
+//inverse sphere with space.jpg seen on inside
+
+const geometry14 = new THREE.SphereGeometry( 666, 3333, 3333, 0, Math.PI * 2, 0, Math.PI );
+const material14 = new THREE.MeshBasicMaterial({map: spaceTexture, side: THREE.BackSide, wireframe: false} );
+const sphere = new THREE.Mesh( geometry14, material14 );
+scene.add( sphere );
+
+
+
+ 
+
+
+
 
 //object positionings
 
@@ -302,7 +330,9 @@ function moveCamera() {
   camera.position.x = t * -0.001;
   camera.rotation.y = t * -0.001;
   camera.position.z = t * -0.01;
+
 }
+
 
 document.body.onscroll = moveCamera;
 moveCamera();
