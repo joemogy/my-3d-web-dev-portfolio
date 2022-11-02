@@ -21,47 +21,6 @@ camera.position.setX(-33);
 
 renderer.render(scene, camera);
 
-//GEOMETRY
-// give torus randome color   
-
-function addTorus(size = 3 , ){
-  const geometry = new THREE.TorusGeometry(size, 3, 33, 111);
-  const material = new THREE.MeshStandardMaterial({ color: color1, wireframe: true });
-  const torus = new THREE.Mesh(geometry, material);
-
-  torus.position.set(0, 0, 0);
-  scene.add(torus);
-  return torus;
-  
-}
-// give torus random color USIng Math
-
-const color1 = 0xff00ff;
-const color2 = 0xFF0000;
-const color3 = 0xFF8C00;
-const color4 = 0xFFFF00;
-const color5 = 0x7FFF00;
-const color6 = 0x008000;
-const color7 = 0x00FFFF;
-const color8 = 0x0000FF;
-const color9 = 0x4B0082;
-const color10 = 0x800080;
-const color11 = 0xEE82EE;
-const color12 = 0xff00ff;
-
-
-
-
-
-
-// const torus = addTorus(42, color1);
-// const torus2 = addTorus(48,color2);
-// const torus3 = addTorus(54, color3);
-// const torus4 = addTorus(60, color4);
-// const torus5 = addTorus(66, color5);
-// const torus6 = addTorus(72, color6);
-// const torus7 = addTorus(78, color7);
-// const torus8 = addTorus(84, color8);
 
 // torus
 
@@ -70,7 +29,6 @@ const material = new THREE.MeshStandardMaterial({ color: 0xff00ff, wireframe: tr
 const torus = new THREE.Mesh(geometry, material);
 
 scene.add(torus);  
-
 
 // Torus 2
 
@@ -170,26 +128,24 @@ scene.add(pointLight, ambientLight);
 // const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
-  const geometry = new THREE.SphereGeometry(0.333, 0.333, 0.333);
+  const geometry = new THREE.SphereGeometry(0.3, 0.3, 0.3);
   const material = new THREE.MeshStandardMaterial({ color: 0xffffff, wireframe: true });
   const star = new THREE.Mesh(geometry, material);
 
   const [x, y, z] = Array(3)
     .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(333));
+    .map(() => THREE.MathUtils.randFloatSpread(666));
 
   star.position.set(x, y, z);
   scene.add(star);
 }
 
-Array(666).fill().forEach(addStar);
+Array(1111).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
-scene.background = spaceTexture;
-
-//make background wraparound
+ const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+// scene.background = spaceTexture;
 
 
 // Avatar
@@ -221,29 +177,13 @@ const moon = new THREE.Mesh(new THREE.SphereGeometry(18, 99, 99), new THREE.Mesh
 
 scene.add(moon);
 
-
-
-// //inverse cylinder with space.jpg seen on inside
-
-// const geometry13 = new THREE.CylinderGeometry( 0, 666, 3333, 3333, 3333, true );
-// const material13 = new THREE.MeshBasicMaterial({map: spaceTexture, side: THREE.BackSide, wireframe: false} );
-// const cylinder = new THREE.Mesh( geometry13, material13 );
-// scene.add( cylinder );
-
-
+//background
 //inverse sphere with space.jpg seen on inside
 
-const geometry14 = new THREE.SphereGeometry( 666, 3333, 3333, 0, Math.PI * 2, 0, Math.PI );
-const material14 = new THREE.MeshBasicMaterial({map: spaceTexture, side: THREE.BackSide, wireframe: false} );
-const sphere = new THREE.Mesh( geometry14, material14 );
+const geometry25 = new THREE.SphereGeometry( 777, 192, 108, 0, Math.PI * 2, 0, Math.PI );
+const material25 = new THREE.MeshBasicMaterial({map: spaceTexture, side: THREE.BackSide, wireframe: false} );
+const sphere = new THREE.Mesh( geometry25, material25 );
 scene.add( sphere );
-
-
-
- 
-
-
-
 
 //object positionings
 
@@ -255,15 +195,13 @@ joseph.position.setX(9);
 joseph.position.y = 18;
 joseph.position.z = -18;
 
-joe.position.setX(80);
+joe.position.setX(77);
 joe.position.y = 33;
-joe.position.z = 80;
-
+joe.position.z = 77;
 
 torus.position.setX(-15);
 torus.position.y = 15;
 torus.position.z = 3;
-
 
 torus2.position.setX(-15);
 torus2.position.y = 15;
@@ -330,9 +268,7 @@ function moveCamera() {
   camera.position.x = t * -0.001;
   camera.rotation.y = t * -0.001;
   camera.position.z = t * -0.01;
-
 }
-
 
 document.body.onscroll = moveCamera;
 moveCamera();
